@@ -34,6 +34,7 @@ header {
     background-attachment: fixed;
     position: fixed;
     box-shadow: 1px 1px 14px 0 rgba(50, 104, 5);
+    z-index: 10;
 }
 
 #btn-menu{
@@ -63,6 +64,7 @@ label img{
     padding: 0;
     display: flex;
 }
+
 
 .menu li{
     border-right: 1px solid #fff;
@@ -97,6 +99,16 @@ label img{
     bottom: 0;
     width: 100%;
 }
+
+.texto-encima{
+    position: absolute;
+    top: 65%;
+    left: 60%;
+    font-size: 30px;
+    color: #ffff;
+    text-align: center;
+}
+
 
 
 
@@ -270,9 +282,224 @@ main .sobre-nosotros{
     text-align: justify;
 }
 
+/*Nosotros*/
+
+.equipo{
+    background: #f2f2f2;
+    height: 700px;
+}
+
+.cards-wrapper {
+  margin-top: 10px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card2 {
+  width: 280px;
+  background-color:#F08514;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.card2:hover {
+  transform: scale(1.1);
+}
+
+.equipo .titulo {
+    color: #F08514;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 40px;
+}
+
+@keyframes cardAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card2:nth-child(1) {
+  animation: cardAnim 5s 1s backwards;
+}
+.card2:nth-child(2) {
+  animation: cardAnim 5s 2s backwards;
+}
+.card2:nth-child(3) {
+  animation: cardAnim 5s 3s backwards;
+}
+
+.image-top {
+  width: 101%;
+  height: 220px;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 73%, 0% 100%);
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -110px;
+  z-index: 10;
+  border: 5px solid #eee;
+}
+
+.card2 h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  color:#fff;
+  margin: 10px;
+}
+
+.card2 p{
+  text-align: justify;
+}
+
+.job {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-weight: 300;
+}
+
+.about-me {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+  width: 90%;
+  margin: 15px 0;
+  font-style: italic;
+  color:#fff;
+  text-align: center;
+}
+.social-icons {
+  width: 150px;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 0 20px 0;
+  padding-top: 10px;
+}
+
+h5{
+    margin: 10px 0 20px 0;
+}
+
+.social-icons i {
+  font-size: 18px;
+}
+
+.fa-facebook-f {
+  color: #3b5999;
+}
+.fa-instagram {
+  color: #dd4b39;
+}
+
+/*Contacto*/
 
 
-/* footer */
+.conteformu{
+    width: 90%;
+    max-width: 1000px;
+    background: #fff;
+    padding: 40px;
+    margin: 20px auto;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.conteformu h1{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+    color: green;
+}
+
+.contenidoformu{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.contenidoformu .info,
+.contenidoformu .formulario{
+    width: 50%;
+}
+
+.info{
+    padding: 50px;
+
+}
+
+.info .col{
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 16px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.info .col .icono{
+    color: #F08514;
+    margin-right: 10px;
+}
+
+.info .col p{
+    color: black;
+}
+
+.formulario{
+    padding-left: 10px;
+}
+
+.formulario input[type='text'],
+.formulario textarea{
+    width: 100%;
+    margin-bottom:  15px;
+    padding: 12px 20px;
+    border: 1px solid #999;
+    color: #999;
+    font-weight: 400;
+    outline: 0;
+}
+
+.formulario textarea{
+    max-width: 100%;
+    min-width: 100%;
+    min-width: 150px;
+    max-height: 200px;
+}
+
+.formulario input[type='text']:focus,
+.formulario textarea:focus{
+    border: 1px solid #F08514;
+}
+
+.formulario button{
+    padding: 12px 30px;
+    border:transparent;
+    background: green;
+    color:#fff;
+    cursor: pointer;
+    float: right;
+}
+
+/*footer*/
 
 footer{
     background: #fff;
@@ -396,6 +623,47 @@ footer{
     .caracteristicas-ind img:hover{
     width: 42%;
     }
+
+    .cards-wrapper {
+      position: absolute;
+      width: 80%;
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      top: 35%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .equipo{
+        height: 790px;
+    }
+
+    h5{
+          font-size: 8px;
+          width: 90%;
+          margin: 10px 0;
+          color:black;
+          text-align: center;
+    }
+
+    .card2 {
+      width: 320px;
+      background-color: #F08514;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+      margin-left: 15px;
+    }
+
+    .card2 h3 {
+      font-size: 12px;
+      color: black;
+      margin: 10px;
+    }
+
 }
 
 @media screen and (max-width:500px){
@@ -470,4 +738,6 @@ footer{
     .titulo-final{
         font-size: 20px;
     }
+
+
 }
