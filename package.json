@@ -1,0 +1,19 @@
+{
+  "name": "api-prueba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc-watch --on succes \"node dist/index.js" 
+  },
+  "keywords": [
+    "ayuda!!"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "expres": "0.0.5",
+    "mongoose": "^5.9.24",
+    "morgan": "^1.10.0"
+  }
+}
